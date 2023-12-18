@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="~/css/main.css" rel="stylesheet" type="text/css" />
+    <title>Rent</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-menu">
+            <ul class="nav-menu">
+                <li class="nav-menu__item">
+                    <a href="@Url.Action("Index", "cars")">Автомобили</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="@Url.Action("Index", "cars")">Прокат</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="@Url.Action("Index", "cars")">Профиль</a>
+                </li>
+            </ul>   
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>

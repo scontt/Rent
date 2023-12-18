@@ -1,0 +1,46 @@
+﻿html {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 93vh;
+}
+
+.main {
+    display: grid;
+    min-height: 100%;
+    margin-top: auto;
+}
+
+.car-list {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+
+.car-list__item {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.car-img {
+    width: 300px;
+}
+
+.rent-button {
+    position: absolute;
+    padding: 5px;
+    background-color: aliceblue;
+    border: 1px solid gray;
+    border-radius: 5px;
+    min-width: 100px;
+    bottom: 0;
+}

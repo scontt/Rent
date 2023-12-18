@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rent</title>
+    <link href="~/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="main">
+        <div class="car-list">
+            <div class="car-list__item">
+                <img src="~/img/civic.png" class="car-img" />
+                <h2>Honda</h2>
+                <p>Стоимость: 1000руб./ч</p>
+                <a href="@Url.Action("Index", "home")" class="rent-button">Арендовать</a>
+            </div>
+            <div class="car-list__item">
+                <img src="~/img/corolla.png" class="car-img" />
+                <h2>Toyota</h2>
+                <p>Стоимость: 1000руб./ч</p>
+                <a href="@Url.Action("Index", "home")" class="rent-button">Арендовать</a>
+            </div>
+            <div class="car-list__item">
+                <img src="~/img/sonata.webp" class="car-img" />
+                <h2>Hyundai</h2>
+                <p>Стоимость: 1000руб./ч</p>
+                <a href="@Url.Action("Index", "home")" class="rent-button">Арендовать</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
