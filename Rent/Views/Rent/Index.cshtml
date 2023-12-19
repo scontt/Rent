@@ -1,48 +1,33 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model Car
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>[Название компании по прокату автомобилей]</title>
-    <link rel="stylesheet" type="text/css" href="~/css/rent.css" />
+    <link rel="stylesheet" href="~/css/rent.css">
 </head>
 <body>
     <main class="main">
-        <div class="title">
-            <h1>[Название компании по прокату автомобилей]</h1>
-            <img src="[Изображение автомобиля]" alt="[Название автомобиля]">
+        <img src="@Url.Content(Model.Image)" alt="Автомобиль" class="car-img">
+        <div class="car-short-info">
+            <h2>@Model.Brand.Name</h2>
+            <p>@Model.Model.Name</p>
         </div>
-
-        <div class="main-block">
-
-        </div>
-        <section class="description">
-            <p>
-                [Компания по прокату автомобилей] предлагает широкий выбор автомобилей для аренды в Нидерландах. Мы предлагаем автомобили всех размеров и классов, чтобы удовлетворить любые потребности наших клиентов. Наши автомобили оснащены новейшими технологиями безопасности и комфорта, чтобы обеспечить вам безопасное и комфортное путешествие.
-            </p>
-        </section>
-
-        <section class="contact">
-            <ul>
-                <li>Адрес: [Адрес]</li>
-                <li>Телефон: [Телефон]</li>
-                <li>Электронная почта: [Электронная почта]</li>
-            </ul>
-        </section>
-
         <section class="booking">
-            <form action="[Ссылка на форму бронирования]" method="post">
-                <input type="text" name="name" placeholder="Ваше имя">
-                <input type="text" name="email" placeholder="Ваш адрес электронной почты">
-                <input type="text" name="phone" placeholder="Ваш номер телефона">
-                <input type="date" name="start_date" placeholder="Дата начала аренды">
-                <input type="date" name="end_date" placeholder="Дата окончания аренды">
-                <input type="submit" value="Ssdijf">
+            <form action="[Ссылка на форму бронирования]" method="post" class="rent-form">
+                <div class="rent-date">
+                    <input type="date" name="start_date" placeholder="Дата начала аренды">
+                </div>
+                <div class="rent-button">
+                    <input type="submit" value="Забронировать">
+                </div>
             </form>
         </section>
     </main>
+
 </body>
 </html>

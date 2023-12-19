@@ -1,14 +1,34 @@
-﻿@{
+﻿@using Rent.Models
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model List<Car>
 
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Rent</title>
-        <meta charset="utf-8" />
-    </head>
-    <body>
-        <h1>Hello, Danila!</h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rent</title>
+    <link rel="stylesheet" type="text/css" href="~/css/cars.css" />
+</head>
+<body>
+    <div class="main">
+        <div class="car-list">
+            @foreach(Car car in Model) {
+                <div class="car-list__item">
+                    <img src="@Url.Content(car.Image)" class="car-img" />
+                    <div class="car-short-info">
+                        <div class="cost">
+                            <h2 class="car-name">@car.Brand.Name</h2>
+                            <p>Стоимость: @car.Class.Cost руб./ч</p>
+                        </div>
+                        <div class="rent-car-button">
+                            <a href="@Url.RouteUrl(new { controller = "Rent", action = "Index", carId = @car.Id})" class="rent-button">Арендовать</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
 </html>
